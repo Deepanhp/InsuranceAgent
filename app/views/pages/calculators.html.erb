@@ -1,0 +1,209 @@
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="display-4 mb-3">Insurance Premium Calculators</h1>
+    <p class="lead">Calculate estimated premiums for different LIC insurance plans</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Term Insurance Calculator -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title mb-4">
+            <i class="fas fa-shield-alt text-primary me-2"></i>
+            Term Insurance Calculator
+          </h3>
+          <form id="term-calculator" class="calculator-form" data-calculator-type="term">
+            <div class="mb-3">
+              <label class="form-label">Your Age</label>
+              <input type="number" name="age" class="form-control" required min="18" max="65">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Sum Assured (₹)</label>
+              <input type="number" name="sum_assured" class="form-control" required min="100000" step="100000">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Policy Term (Years)</label>
+              <input type="number" name="term" class="form-control" required min="5" max="40">
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate Premium</button>
+          </form>
+          <div class="result mt-3" style="display: none;">
+            <hr>
+            <h4 class="text-primary">Annual Premium: ₹<span class="premium-amount"></span></h4>
+            <p class="text-muted small">*Premium includes 18% GST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Endowment Plan Calculator -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title mb-4">
+            <i class="fas fa-piggy-bank text-primary me-2"></i>
+            Endowment Plan Calculator
+          </h3>
+          <form id="endowment-calculator" class="calculator-form" data-calculator-type="endowment">
+            <div class="mb-3">
+              <label class="form-label">Your Age</label>
+              <input type="number" name="age" class="form-control" required min="18" max="65">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Sum Assured (₹)</label>
+              <input type="number" name="sum_assured" class="form-control" required min="100000" step="100000">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Policy Term (Years)</label>
+              <input type="number" name="term" class="form-control" required min="10" max="40">
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate Premium</button>
+          </form>
+          <div class="result mt-3" style="display: none;">
+            <hr>
+            <h4 class="text-primary">Annual Premium: ₹<span class="premium-amount"></span></h4>
+            <p class="text-muted small">*Premium includes 18% GST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pension Plan Calculator -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title mb-4">
+            <i class="fas fa-hand-holding-usd text-primary me-2"></i>
+            Pension Plan Calculator
+          </h3>
+          <form id="pension-calculator" class="calculator-form" data-calculator-type="pension">
+            <div class="mb-3">
+              <label class="form-label">Your Age</label>
+              <input type="number" name="age" class="form-control" required min="18" max="55">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Desired Monthly Pension (₹)</label>
+              <input type="number" name="monthly_pension" class="form-control" required min="5000" step="1000">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Retirement Age</label>
+              <input type="number" name="retirement_age" class="form-control" required min="45" max="70">
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate Premium</button>
+          </form>
+          <div class="result mt-3" style="display: none;">
+            <hr>
+            <h4 class="text-primary">Annual Premium: ₹<span class="premium-amount"></span></h4>
+            <p class="text-muted small">*Premium includes 18% GST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Child Plan Calculator -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title mb-4">
+            <i class="fas fa-child text-primary me-2"></i>
+            Child Plan Calculator
+          </h3>
+          <form id="child-calculator" class="calculator-form" data-calculator-type="child">
+            <div class="mb-3">
+              <label class="form-label">Child's Age</label>
+              <input type="number" name="child_age" class="form-control" required min="0" max="17">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Sum Assured (₹)</label>
+              <input type="number" name="sum_assured" class="form-control" required min="100000" step="100000">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Policy Term (Years)</label>
+              <input type="number" name="term" class="form-control" required min="10" max="25">
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate Premium</button>
+          </form>
+          <div class="result mt-3" style="display: none;">
+            <hr>
+            <h4 class="text-primary">Annual Premium: ₹<span class="premium-amount"></span></h4>
+            <p class="text-muted small">*Premium includes 18% GST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <div class="alert alert-info">
+      <h4 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Important Note</h4>
+      <p class="mb-0">These calculations are approximate estimates based on general LIC premium rates. Actual premium amounts may vary based on various factors including but not limited to medical history, occupation, lifestyle, and policy terms & conditions. Please contact us for accurate premium calculations.</p>
+    </div>
+  </div>
+</div>
+
+<% content_for :page_scripts do %>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const calculatorForms = document.querySelectorAll('.calculator-form');
+  
+  calculatorForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      formData.append('calculator_type', form.dataset.calculatorType);
+      
+      fetch('/calculate_premium', {
+        method: 'POST',
+        headers: {
+          'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content,
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+      })
+      .then(response => response.json())
+      .then(data => {
+        const resultDiv = form.nextElementSibling;
+        const premiumAmount = resultDiv.querySelector('.premium-amount');
+        
+        premiumAmount.textContent = data.premium.toLocaleString('en-IN');
+        resultDiv.style.display = 'block';
+        
+        // Smooth scroll to result
+        resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while calculating the premium. Please try again.');
+      });
+    });
+  });
+});
+</script>
+
+<style>
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #0d6efd;
+}
+
+.result {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+<% end %> 
