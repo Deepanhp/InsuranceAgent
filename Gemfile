@@ -64,6 +64,6 @@ end
 
 gem "sassc-rails"
 gem "bootstrap", "~> 5.3.0"
-gem "font-awesome-sass", "~> 6.5.1"
+gem "font-awesome-sass", "~> 6.7.2"
 gem "animate.css-rails"
 gem "jquery-rails"
